@@ -2,15 +2,18 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, } from "@fortawesome/free-brands-svg-icons";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import csi from "../assets/CSI_logo.png"
 
 const Footer = () => {
   return (
     <div className="flex flex-col items-center bg-blue-300 py-8">
-      <div className="flex flex-wrap gap-6 justify-center max-w-6xl w-full px-4">
+      <div className="flex flex-wrap gap-6 justify-center max-w-7xl w-full px-4">
         
         {/* Section 1 */}
-        <div className="p-4 w-full  sm:w-1/2 lg:w-1/5">
-          <h3 className="text-4xl text-white">COMPUTER SOCIETY OF INDIA (CSI)</h3>
+        <div className="p-4 w-full flex flex-col items-center  sm:w-1/2 lg:w-1/5">
+          <h3 className="text-4xl mb-3 text-white">COMPUTER SOCIETY OF INDIA (CSI)</h3>
+          <Link to="https://csiindia.org/home"><img src={csi}/></Link>
         </div>
 
         {/* Section 2 */}
@@ -27,8 +30,11 @@ const Footer = () => {
         {/* Section 3 */}
         <div className="p-4 w-full sm:w-1/2 lg:w-1/5 flex flex-col gap-2">
           <h3 className="text-2xl mb-4 text-white">CONTACT US</h3>
-          <span className="text-xl text-white">+91 XXXX XXX XXX</span>
-          <span className="text-xl text-white">uemkcsi@gmail.com</span>
+          <span className="text-md text-white"><h3 className="font-bold text-lg inline-block">Priyanshu:</h3>+91 84206 88671</span>
+          <span className="text-md text-white"><h3 className="font-bold text-lg inline-block">Manjima:</h3>+91 96740 63935</span>
+          <span className="text-md text-white"><h3 className="font-bold text-lg inline-block">Priyabrata:</h3>+91 81167 65002</span>
+          <span className="text-md text-white"><h3 className="font-bold text-lg inline-block">Ipsita:</h3>+91 70442 22721</span>
+          <span className="text-xl text-white font-bold">csi.uemk.01@gmail.com</span>
 
           {/* Social Media Icons */}
           <div className="flex justify-center gap-4 mt-2 text-3xl">

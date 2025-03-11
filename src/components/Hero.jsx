@@ -1,9 +1,12 @@
 import React from "react";
+import bg_pic from "../assets/background_pic.jpg";
 
 const Hero = () => {
   return (
-    <div className="relative bg-[url('https://images.pexels.com/photos/109371/pexels-photo-109371.jpeg?auto=compress&cs=tinysrgb&w=600')] bg-cover bg-center bg-fixed h-screen flex items-center justify-center">
-      
+    <div
+      className="relative bottom-[97px] bg-cover bg-center bg-fixed h-screen flex items-center justify-center"
+      style={{ backgroundImage: `url(${bg_pic})` }}
+    >
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <div className="relative z-10 text-white text-center">
