@@ -5,6 +5,7 @@ import Layout from './components/Layout'
 import Home from './Pages/Home/Home'
 import About from './Pages/About/About'
 import Team from './Pages/Teams/Team'
+import Gallery from './Pages/Gallery/Gallery'
 
 function App() {
   const route=createBrowserRouter([
@@ -24,6 +25,11 @@ function App() {
           path:"/team",
           element:<Team/>
         },
+        {
+          path:"/gallery",
+          element:<Gallery/>
+        },
+        
       ]
     }
   ])  

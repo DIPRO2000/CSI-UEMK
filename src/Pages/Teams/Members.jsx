@@ -24,6 +24,7 @@ const Member=()=>{
 
     return(
         <>
+            <h1 className="mb-20 text-center text-3xl font-bold text-white">TEAM</h1>
             <div className="flex flex-wrap justify-center gap-x-10 gap-y-10 max-w-[1200px] mx-auto px-4">
                 <Card
                     image={images[0]}

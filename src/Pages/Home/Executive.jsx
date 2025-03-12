@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import Postbtn from "../../components/UI/Postbtn";
 import img1 from "../../assets/img1.jpeg";   //PRIYANSHU
 import img2 from "../../assets/img2.jpg";   //DIPRO
 import img3 from "../../assets/img3.jpg";   //IPSITA
@@ -64,8 +65,8 @@ const Executive = () => {
   },[]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#6c63ff]">
-      <h1 className="mb-20 text-center text-3xl font-bold text-white">EXECUTIVE BOARD</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#a7b7e7]">
+      <h1 className="mb-20 text-center font-rowdies text-6xl font-bold text-white" >EXECUTIVE BOARD</h1>
 
       <div className="relative w-full max-w-4xl overflow-hidden">
         {/* Carousel Wrapper */}
@@ -80,7 +81,7 @@ const Executive = () => {
                   <img
                     src={member.img}
                     alt={member.name}
-                    className="w-[100px] h-[100px] object-cover rounded-lg"
+                    className="w-[150px] h-[150px] object-cover rounded-lg"
                   />
                   <h3 className="text-white font-semibold">{member.name}</h3>
                   <span className="text-gray-300">{member.designation}</span>
@@ -105,7 +106,7 @@ const Executive = () => {
         </button>
       </div>
 
-      <div className="py-3 px-6 my-6 inline-block cursor-pointer text-white text-xl bg-orange-700 hover:rounded-3xl"><NavLink to="/team">SEE TEAM</NavLink></div>
+      <div className="py-10"><NavLink to="/team"><Postbtn text={"SEE TEAM"}/></NavLink></div>
     </div>
   );
 };

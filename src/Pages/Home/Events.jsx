@@ -1,27 +1,38 @@
 import React from "react";
 import Poster from "../../components/Poster";
+import poster1 from "../../assets/poster.jpg"
 
 const Events=()=>{
+    
+
     return(
         <>
-            <div className="bg-[#6c63ff] text-white px-8">
-                <h1 className="text-4xl py-4 text-center">EXPLORE OUR EVENTS</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="relative bg-[url('https://i.imgur.com/3dYZjZn.jpeg')] text-white px-8 py-10">
+                {/* <div className="absolute inset-0 backdrop-blur-sm"></div> */}
+                <h1 className="text-6xl font-rowdies py-4 text-center">EXPLORE OUR EVENTS</h1>
+                <div className="grid grid-cols-1 md:grid-cols-2">
 
-                    <div className="border-2 border-black p-4 rounded-2xl">
-                        <h1 className="text-center text-xl font-semibold">Ongoing Events</h1>
+                    <div className=" p-4 md:border-r-2 border-white rounded-2xl">
+                        <h1 className="text-center text-3xl my-10 font-semibold">Ongoing Events</h1>
                         <div className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-5">
-                            <Poster/>
-                            
+                            <Poster
+                                name={"PYSPRINT"}
+                                text={"DATE:22nd March,2025"}
+                                btn={"REGISTER"}
+                                link={"https://forms.gle/rJb1S3RJsLHPzJ139"} 
+                            />    
                         </div>
                     </div>
                     
-                    <div className="border-2 border-black p-4 rounded-2xl">
-                        <h1 className="text-center text-xl font-semibold">Past Events</h1>
+                    <div className="k p-4 md:border-l-2 border-white rounded-2xl">
+                        <h1 className="text-center text-3xl my-10 font-semibold">Past Events</h1>
                         <div className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-5">
-                            <Poster/>
-                            <Poster/>
-                            <Poster/>
+                            <Poster
+                                name={"DSA WORKSHOP"}
+                                text={"DATE:22nd March,2025"}
+                                btn={"VIEW"}
+                                link={"/gallery"}
+                            />
                         </div>
                         
                     </div>
