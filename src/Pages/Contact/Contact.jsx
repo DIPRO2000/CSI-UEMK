@@ -14,7 +14,7 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         
-        const response = await fetch("http://localhost:5000/submit", {
+        const response = await fetch("https://csi-uemk.onrender.com/submit", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
