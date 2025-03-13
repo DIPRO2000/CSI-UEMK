@@ -33,13 +33,16 @@ const members = [
 const Member = () => {
     return (
         <>
-            <h1 className="mb-20 text-center font-rowdies text-6xl font-bold text-white">TEAM</h1>
-            <h3 className="mb-20 text-center font-rowdies text-3xl font-bold text-white">MEMBERS</h3>
-            <div className="flex flex-wrap justify-center gap-x-10 gap-y-10 max-w-[1200px] mx-auto px-4">
-                {members.map((member, index) => (
-                    <Card key={index} image={member.image} nm={member.name} desig={member.designation} />
-                ))}
+            <div className="py-10 bg-[url('https://i.imgur.com/2X6BRTJ.jpeg')] ">
+                <h1 className="mb-20 text-center font-rowdies text-6xl font-bold text-white">TEAM</h1>
+                <h3 className="mb-20 text-center font-rowdies text-3xl font-bold text-white">MEMBERS</h3>
+                <div className="flex flex-wrap justify-center gap-x-10 gap-y-10 max-w-[1200px] mx-auto px-4">
+                    {members.map((member, index) => (
+                        <Card key={index} image={member.image} nm={member.name} desig={member.designation} />
+                    ))}
+                </div>
             </div>
+            
         </>
     );
 };

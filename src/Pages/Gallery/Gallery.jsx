@@ -12,15 +12,18 @@ const Gallery=()=>{
 
     return(
         <>
-            <h1 className="mb-20 text-center font-rowdies text-6xl font-bold text-white" >GALLERY</h1>
-            <div className="flex flex-wrap justify-center gap-x-10 gap-y-10 max-w-[1200px] mx-auto px-4">
-                <Picture ig={img1}/>
-                <Picture ig={img2}/>
-                <Picture ig={img3}/>
-                <Picture ig={img4}/>
-                <Picture ig={img5}/>
-                <Picture ig={img6}/>
+            <div className="py-10">
+                <h1 className="mb-20 text-center font-rowdies text-6xl font-bold text-white" >GALLERY</h1>
+                <div className="flex flex-wrap justify-center gap-x-10 gap-y-10 max-w-[1200px] mx-auto px-4">
+                    <Picture ig={img1}/>
+                    <Picture ig={img2}/>
+                    <Picture ig={img3}/>
+                    <Picture ig={img4}/>
+                    <Picture ig={img5}/>
+                    <Picture ig={img6}/>
+                </div>
             </div>
+            
         </>
     )
 }

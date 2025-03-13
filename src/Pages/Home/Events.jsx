@@ -1,6 +1,7 @@
 import React from "react";
 import Poster from "../../components/Poster";
-import poster1 from "../../assets/poster.jpg"
+import pysprint from "../../assets/Posters/poster.jpg";
+import dsaworkshop from "../../assets/Posters/dsa_poster.jpeg"; 
 
 const Events=()=>{
     
@@ -19,6 +20,7 @@ const Events=()=>{
                                 name={"PYSPRINT"}
                                 text={"DATE:22nd March,2025"}
                                 btn={"REGISTER"}
+                                post={pysprint}
                                 link={"https://forms.gle/rJb1S3RJsLHPzJ139"} 
                             />    
                         </div>
@@ -29,8 +31,9 @@ const Events=()=>{
                         <div className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-5">
                             <Poster
                                 name={"DSA WORKSHOP"}
-                                text={"DATE:22nd March,2025"}
+                                text={"DATE:28th September,2024"}
                                 btn={"VIEW"}
+                                post={dsaworkshop}
                                 link={"/gallery"}
                             />
                         </div>

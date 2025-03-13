@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { NavLink, Link } from "react-router-dom";
 import csi_logo from "../assets/CSI_logo.png";
 import uem_logo from "../assets/UEM_logo.png";
@@ -8,6 +9,8 @@ import Hover from "./UI/Hover";
 const Navbar = () => {
     const [ScrollY, setScrollY] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false); // State for mobile menu
+    const location=useLocation();
+    const Pathname=location.pathname;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -19,7 +22,7 @@ const Navbar = () => {
 
     return (
         <div className={`flex items-center justify-between px-6 md:px-10 h-[15vh] sticky top-0 z-20 text-white 
-            ${ScrollY > 50 ? "bg-[#023047]" : "bg-transparent"} transition-all duration-300 ease-in-out`}>
+            ${(Pathname==="/")?(ScrollY > 50 )? "bg-[#023047]" : "bg-transparent" : "bg-[#023047]"} transition-all duration-300 ease-in-out`}>
 
             {/* Logo and Title */}
             <div className="flex items-center gap-4">
@@ -46,7 +49,7 @@ const Navbar = () => {
                 md:w-auto bg-blue-500 md:bg-transparent transition-transform ${menuOpen ? "translate-y-0" : "-translate-y-[150%]"} md:translate-y-0`}>
                 <ul className="flex flex-col md:flex-row items-center gap-6 py-4 md:py-0">
                     <li ><NavLink to="/" onClick={() => setMenuOpen(false)}><Hover text={"HOME"}/></NavLink></li>
-                    <li ><NavLink to="/about" onClick={() => setMenuOpen(false)}><Hover text={"ABOUT"}/></NavLink></li>
+                    {/* <li ><NavLink to="/about" onClick={() => setMenuOpen(false)}><Hover text={"ABOUT"}/></NavLink></li> */}
                     <li ><NavLink to="/team" onClick={() => setMenuOpen(false)}><Hover text={"TEAM"}/></NavLink></li>
                     <li ><NavLink to="/gallery" onClick={() => setMenuOpen(false)}><Hover text={"GALLERY"}/></NavLink></li>
                     <li ><NavLink to="/contact" onClick={() => setMenuOpen(false)}><Hover text={"CONTACT"}/></NavLink></li>

@@ -14,9 +14,15 @@ import img10 from "../../assets/img10.png"; //Madhuparna
 import img11 from "../../assets/img11.png"; //Anwesha
 import img12 from "../../assets/img12.jpg"; //Ankita
 import img13 from "../../assets/img13.jpg"; //subhojit
+import skm from "../../assets/Faculty/skm.jpg"; //SKM Sir
+import sm from "../../assets/Faculty/sm.jpg";   //Aniruddha Sir
+import ad from "../../assets/Faculty/aniruddha.jpeg";  //Sanjukta Ma'am
 
 const Executive = () => {
   const members = [
+    { name: "Sudipto Kar Mondal", img: skm, designation: "Faculty Co-Ordinator"},
+    { name: "Aniruddha Das", img: ad, designation: "Faculty Co-Ordinator" },
+    { name: "Sanjukta Mishra", img: sm, designation: "Faculty Co-Ordinator" },
     { name: "Priyanshu", img: img1, designation: "President" },
     { name: "Manjima Dutta", img: img5, designation: "Vice President" },
     { name: "Priyabrata Choudhury", img: img8, designation: "Manager" },
@@ -55,7 +61,7 @@ const Executive = () => {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 3000);
+    const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
   }, []);
 
@@ -65,7 +71,7 @@ const Executive = () => {
   },[]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#a7b7e7]">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[url('https://i.imgur.com/2X6BRTJ.jpeg')] bg-cover h-screen bg-no-repeat">
       <h1 className="mb-20 text-center font-rowdies text-6xl font-bold text-white" >EXECUTIVE BOARD</h1>
 
       <div className="relative w-full max-w-4xl overflow-hidden">
@@ -83,8 +89,8 @@ const Executive = () => {
                     alt={member.name}
                     className="w-[150px] h-[150px] object-cover rounded-lg"
                   />
-                  <h3 className="text-white font-semibold">{member.name}</h3>
-                  <span className="text-gray-300">{member.designation}</span>
+                  <h3 className="text-white font-bold">{member.name}</h3>
+                  <span className="text-gray-300 font-extrabold">{member.designation}</span>
                 </div>
               ))}
             </div>

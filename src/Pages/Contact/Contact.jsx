@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Postbtn from "../../components/UI/Postbtn";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -29,8 +30,8 @@ const Contact = () => {
     };
 
     return (
-        <div className="max-w-lg mx-auto p-6 bg-gray-800 text-white rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+        <div className=" max-w-lg md:mx-auto mx-5 my-20 p-6 bg-gray-800 text-white rounded-lg">
+            <h2 className="text-3xl font-bold mb-4 text-center font-rowdies">Contact Us</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                     <label className="block">Name</label>
@@ -44,7 +45,9 @@ const Contact = () => {
                     <label className="block">Message</label>
                     <textarea name="message" value={formData.message} onChange={handleChange} required className="w-full p-2 bg-gray-700 rounded"></textarea>
                 </div>
-                <button type="submit" className="bg-green-500 p-2 rounded">Send Message</button>
+                <div className="flex justify-center">
+                    <button type="submit" className="text-black"><Postbtn text={"SUBMIT"}/></button>
+                </div> 
             </form>
         </div>
     );
