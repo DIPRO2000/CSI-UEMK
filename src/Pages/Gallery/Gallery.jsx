@@ -12,6 +12,7 @@ const Gallery=()=>{
 
     return(
         <>
+            <h1 className="mb-20 text-center font-rowdies text-6xl font-bold text-white" >GALLERY</h1>
             <div className="flex flex-wrap justify-center gap-x-10 gap-y-10 max-w-[1200px] mx-auto px-4">
                 <Picture ig={img1}/>
                 <Picture ig={img2}/>

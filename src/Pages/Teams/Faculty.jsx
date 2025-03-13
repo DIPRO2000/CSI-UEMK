@@ -3,32 +3,39 @@ import Card from "./Card";
 import skm from "../../assets/skm.jpg";
 import sm from "../../assets/sm.jpg";
 
-const Faculty=()=>{
-    const name=["Sudipto Kar Mondal","Sanjukta Mishra"];
-    const designation=["Faculty Co-Ordinator"];
-    const words=["'In the comming years, we are looking forward to make everything in a proper shape.Six years ago we started our jouney.This is a place where correctly we can say By the Student, For the student... We believe that our efforts will certainly widen our Capabilities and that will bring sustainable growth.'",""];
+const facultyMembers = [
+    { 
+        name: "Sudipto Kar Mondal", 
+        designation: "Faculty Co-Ordinator", 
+        image: skm, 
+        words: "'In the coming years, we are looking forward to making everything in proper shape. Six years ago, we started our journey. This is a place where we can correctly say 'By the Student, For the Student.' We believe that our efforts will certainly widen our capabilities and bring sustainable growth.'"
+    },
+    { 
+        name: "Sanjukta Mishra", 
+        designation: "Faculty Co-Ordinator", 
+        image: sm, 
+        words: ""
+    }
+];
 
-    return(
+const Faculty = () => {
+    return (
         <>
-            <h1 className="mb-20 text-center text-3xl font-bold text-white">TEAM</h1>
+            <h1 className="mb-20 text-center font-rowdies text-6xl font-bold text-white">TEAM</h1>
+            <h3 className="mb-20 text-center font-rowdies text-3xl font-bold text-white">FACULTY CO-ORDINATORS</h3>
             <div className="flex flex-wrap justify-center gap-x-10 gap-y-10 max-w-[1200px] mx-auto px-4">
-
-                <Card
-                    image={skm}
-                    nm={name[0]}
-                    desig={designation[0]}
-                    word={words[0]}
-                />
-                <Card
-                    image={sm}
-                    nm={name[1]}
-                    desig={designation[0]}
-                    word={words[0]}
-                />
+                {facultyMembers.map((faculty, index) => (
+                    <Card 
+                        key={index}
+                        image={faculty.image} 
+                        nm={faculty.name} 
+                        desig={faculty.designation} 
+                        word={faculty.words} 
+                    />
+                ))}
             </div>
-            
         </>
-    )
-}
+    );
+};
 
-export default Faculty
+export default Faculty;
