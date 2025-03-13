@@ -13,11 +13,16 @@ app.use(bodyParser.json());
 // Airtable API Configuration
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
 const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
-const AIRTABLE_TABLE_NAME = "Contacts"; // Make sure it matches your Airtable table name
+const AIRTABLE_TABLE_NAME = "Contact"; // Make sure it matches your Airtable table name
 
 // Debugging: Log API Key and Base ID (Remove this in production)
 console.log("🚀 Airtable API Key:", AIRTABLE_API_KEY ? "Loaded ✅" : "Not Found ❌");
 console.log("🚀 Airtable Base ID:", AIRTABLE_BASE_ID ? AIRTABLE_BASE_ID : "Not Found ❌");
+
+// ✅ Default Route to Check if Backend is Running
+app.get("/", (req, res) => {
+    res.send("✅ Airtable API is running!");
+});
 
 // Function to Save Data to Airtable
 const saveToAirtable = async (data) => {
@@ -30,7 +35,7 @@ const saveToAirtable = async (data) => {
                     Name: data.name,
                     Email: data.email,
                     Message: data.message,
-                    Date: new Date().toLocaleString()
+                    DATE: new Date().toLocaleString()
                 }
             }]
         }, {
@@ -41,13 +46,14 @@ const saveToAirtable = async (data) => {
         });
 
         console.log("✅ Data saved to Airtable:", response.data);
+        return response.data; // Return response for logging
     } catch (error) {
         console.error("🚨 Airtable API Error:", error.response?.data || error.message);
-        throw error;  // Re-throw error so `/submit` route can handle it
+        throw error; // Re-throw error so `/submit` route can handle it
     }
 };
 
-// API Route to Receive Form Data and Save to Airtable
+// ✅ API Route to Receive Form Data and Save to Airtable
 app.post("/submit", async (req, res) => {
     const { name, email, message } = req.body;
 
@@ -64,7 +70,7 @@ app.post("/submit", async (req, res) => {
     }
 });
 
-// Start Server
+// ✅ Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`🚀 Server running on port ${PORT}`);
