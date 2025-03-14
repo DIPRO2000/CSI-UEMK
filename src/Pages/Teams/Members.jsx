@@ -19,7 +19,7 @@ const members = [
     { name: "Manjima Dutta", designation: "Vice President", image: img5 },
     { name: "Priyabrata Choudhury", designation: "Manager", image: img8 },
     { name: "Ipshita Das", designation: "Manager", image: img3 },
-    { name: "Diprajit Chakraborty", designation: "Event Co-ordinator and Web-Dev", image: img2 },
+    { name: "Diprajit Chakraborty", designation: "Web-Dev and Event Co-ordinator", image: img2 },
     { name: "Ujan Sarkar", designation: "Event Co-ordinator", image: img4 },
     { name: "Anwesha Sinha", designation: "Event Co-ordinator", image: img11 },
     { name: "Mehul Bhattacharji", designation: "Content and Graphics", image: img7 },
