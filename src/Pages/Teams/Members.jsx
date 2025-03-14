@@ -22,7 +22,7 @@ const members = [
     { name: "Diprajit Chakraborty", designation: "Event Co-ordinator and Web-Dev", image: img2 },
     { name: "Ujan Sarkar", designation: "Event Co-ordinator", image: img4 },
     { name: "Anwesha Sinha", designation: "Event Co-ordinator", image: img11 },
-    { name: "Mehul Bhattacharji", designation: "Content", image: img7 },
+    { name: "Mehul Bhattacharji", designation: "Content and Graphics", image: img7 },
     { name: "Madhuparna Das", designation: "Content", image: img10 },
     { name: "Deepjyoti Bhattacharya", designation: "Graphics", image: img6 },
     { name: "Vedanta", designation: "Graphics", image: img13 },
