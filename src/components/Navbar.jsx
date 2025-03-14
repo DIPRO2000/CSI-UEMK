@@ -12,6 +12,19 @@ const Navbar = () => {
     const location=useLocation();
     const Pathname=location.pathname;
 
+    const LogoClick=()=>{
+        (Pathname==="/") ? window.scrollTo(0,0) : "";
+    }
+
+    const menuClick = (event) => {
+        let element = event.target.innerText.toLowerCase(); // Convert text to lowercase
+        let menuItem = element === "home" ? "/" : `/${element}`; // Handle home separately
+    
+        if (Pathname === menuItem) {
+            window.scrollTo(0, 0);
+        }
+    };
+
     useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
@@ -20,13 +33,16 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+
     return (
         <div className={`flex items-center justify-between px-6 md:px-10 h-[15vh] sticky top-0 z-20 text-white 
             ${(Pathname==="/")?(ScrollY > 50 )? "bg-[#023047]" : "bg-transparent" : "bg-[#023047]"} transition-all duration-300 ease-in-out`}>
 
             {/* Logo and Title */}
             <div className="flex items-center gap-4">
-                <h2 className="text-3xl font-rowdies md:text-5xl">CSI UEMK</h2>
+                <NavLink to="/">
+                    <h2 className="text-3xl font-rowdies md:text-5xl" onClick={LogoClick}>CSI UEMK</h2>
+                </NavLink>
                 <Link to="https://csiindia.org/home">
                     <img src={csi_logo} alt="CSI Logo" className="h-[30px] w-[60px] md:h-[50px] md:w-[90px]"/>
                 </Link>
@@ -48,11 +64,11 @@ const Navbar = () => {
             <div className={`md:flex flex-col md:flex-row items-center gap-6 text-lg absolute md:static top-[12vh] left-0 w-full 
                 md:w-auto bg-blue-500 md:bg-transparent transition-transform ${menuOpen ? "translate-y-0" : "-translate-y-[150%]"} md:translate-y-0`}>
                 <ul className="flex flex-col md:flex-row items-center gap-6 py-4 md:py-0">
-                    <li ><NavLink to="/" onClick={() => setMenuOpen(false)}><Hover text={"HOME"}/></NavLink></li>
+                    <li  onClick={LogoClick}><NavLink to="/" onClick={() => setMenuOpen(false)}><Hover text={"HOME"}/></NavLink></li>
                     {/* <li ><NavLink to="/about" onClick={() => setMenuOpen(false)}><Hover text={"ABOUT"}/></NavLink></li> */}
-                    <li ><NavLink to="/team" onClick={() => setMenuOpen(false)}><Hover text={"TEAM"}/></NavLink></li>
-                    <li ><NavLink to="/gallery" onClick={() => setMenuOpen(false)}><Hover text={"GALLERY"}/></NavLink></li>
-                    <li ><NavLink to="/contact" onClick={() => setMenuOpen(false)}><Hover text={"CONTACT"}/></NavLink></li>
+                    <li onClick={menuClick}><NavLink to="/team" onClick={() => setMenuOpen(false)}><Hover text={"TEAM"}/></NavLink></li>
+                    <li onClick={menuClick}><NavLink to="/gallery" onClick={() => setMenuOpen(false)}><Hover text={"GALLERY"}/></NavLink></li>
+                    <li onClick={menuClick}><NavLink to="/contact" onClick={() => setMenuOpen(false)}><Hover text={"CONTACT"}/></NavLink></li>
                 </ul>
             </div>
         </div>

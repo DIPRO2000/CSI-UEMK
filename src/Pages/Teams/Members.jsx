@@ -25,7 +25,7 @@ const members = [
     { name: "Mehul Bhattacharji", designation: "Content", image: img7 },
     { name: "Madhuparna Das", designation: "Content", image: img10 },
     { name: "Deepjyoti Bhattacharya", designation: "Graphics", image: img6 },
-    { name: "Subhojit", designation: "Graphics", image: img13 },
+    { name: "Vedanta", designation: "Graphics", image: img13 },
     { name: "Ankita Chakraborty", designation: "Finance", image: img12 },
     { name: "Samaraho Mukherjee", designation: "Web-Dev", image: img9 },
 ];
@@ -36,7 +36,7 @@ const Member = () => {
             <div className="py-10 bg-[url('https://i.imgur.com/2X6BRTJ.jpeg')] ">
                 <h1 className="mb-20 text-center font-rowdies text-6xl font-bold text-white">TEAM</h1>
                 <h3 className="mb-20 text-center font-rowdies text-3xl font-bold text-white">MEMBERS</h3>
-                <div className="flex flex-wrap justify-center gap-x-10 gap-y-10 max-w-[1200px] mx-auto px-4">
+                <div className="flex flex-wrap justify-center gap-x-10 gap-y-10 max-w-[1700px] mx-auto px-4">
                     {members.map((member, index) => (
                         <Card key={index} image={member.image} nm={member.name} desig={member.designation} />
                     ))}

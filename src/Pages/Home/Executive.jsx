@@ -33,7 +33,7 @@ const Executive = () => {
     { name: "Mehul Bhattacharji", img: img7, designation: "Content" },
     { name: "Madhuparna Das", img: img10, designation: "Content" },
     { name: "Deepjyoti Bhattacharya", img: img6, designation: "Graphics" },
-    { name: "Subhojit", img: img13, designation: "Graphics" },
+    { name: "Vedanta", img: img13, designation: "Graphics" },
     { name: "Ankita Chakraborty", img: img12, designation: "Finance" },
     { name: "Samaraho Mukherjee", img: img9, designation: "Web-Dev" },
   ];

@@ -30,7 +30,7 @@ const Contact = () => {
     };
 
     return (
-        <div className=" max-w-lg md:mx-auto mx-5 my-20 p-6 bg-gray-800 text-white rounded-lg">
+        <div className=" max-w-lg md:mx-auto mx-5 my-20 p-6 bg-gray-800 text-white rounded-lg ">
             <h2 className="text-3xl font-bold mb-4 text-center font-rowdies">Contact Us</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">

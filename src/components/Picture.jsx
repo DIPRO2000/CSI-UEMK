@@ -4,7 +4,7 @@ const Picture=(props)=>{
     return(
         <>
             <div>
-                <img src={props.ig} className="w-[500px] h-[500px] max-w-full max-h-[300px] md:max-h-[500px] object-cover rounded-lg"/>
+                <img src={props.ig} className="w-[500px] h-[500px] max-w-full max-h-[300px] md:max-h-[500px] object-cover border-2 border-white rounded-lg"/>
             </div>
         </>
     )

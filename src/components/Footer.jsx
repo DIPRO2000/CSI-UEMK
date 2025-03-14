@@ -21,7 +21,7 @@ const Footer = () => {
           <h3 className="text-2xl mb-4 font-rowdies text-white">PERMALINKS</h3>
           <ul className="text-xl text-white space-y-2">
             <li className="hover:underline cursor-pointer"><NavLink to="/">HOME</NavLink></li>
-            <li className="hover:underline cursor-pointer"><NavLink to="/about">ABOUT</NavLink></li>
+            {/* <li className="hover:underline cursor-pointer"><NavLink to="/about">ABOUT</NavLink></li> */}
             <li className="hover:underline cursor-pointer"><NavLink to="/team">TEAM</NavLink></li>
             <li className="hover:underline cursor-pointer"><NavLink to="/gallery">GALLERY</NavLink></li>
             <li className="hover:underline cursor-pointer"><NavLink to="/">CONTACT</NavLink></li>
@@ -39,8 +39,8 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <div className="flex justify-center gap-4 mt-2 text-2xl">
-            <FontAwesomeIcon className="cursor-pointer text-white hover:text-blue-600" icon={faFacebook} />
-            <FontAwesomeIcon className="cursor-pointer text-white hover:text-pink-500" icon={faInstagram} />
+            <Link to="https://www.facebook.com/share/1BMNEp6zE5/"><FontAwesomeIcon className="cursor-pointer text-white hover:text-blue-600" icon={faFacebook} /></Link>
+            <Link to="https://www.instagram.com/csi.uemkolkata/"><FontAwesomeIcon className="cursor-pointer text-white hover:text-pink-500" icon={faInstagram} /></Link>
           </div>
         </div>
 
