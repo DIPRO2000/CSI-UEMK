@@ -6,6 +6,8 @@ import img4 from  "../../assets/gallery/pic4.jpeg";
 import img5 from  "../../assets/gallery/pic5.jpeg";
 import img6 from  "../../assets/gallery/pic6.jpeg";
 import img7 from "../../assets/gallery/priyabrata.jpg";
+import img8 from "../../assets/gallery/pic7.jpg";
+import img9 from "../../assets/gallery/pic8.jpg"
 import Picture from "../../components/Picture";
 
 const Gallery=()=>{
@@ -23,6 +25,8 @@ const Gallery=()=>{
                     <Picture ig={img5}/>
                     <Picture ig={img6}/>
                     <Picture ig={img7}/>
+                    <Picture ig={img8}/>
+                    <Picture ig={img9}/>
                 </div>
             </div>
             

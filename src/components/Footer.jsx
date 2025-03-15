@@ -12,8 +12,10 @@ const Footer = () => {
         
         {/* Section 1 */}
         <div className="p-4 w-full flex flex-col sm:w-1/2 lg:w-1/5">
-          <h3 className="text-3xl mb-3 font-rowdies text-white">COMPUTER SOCIETY OF INDIA (CSI)</h3>
-          <Link to="https://csiindia.org/home"><img src={csi} className="h-[100px] w-[170px] translate-x-2"/></Link>
+          <h3 className="text-3xl mb-3 font-rowdies text-center sm:text-start text-white">COMPUTER SOCIETY OF INDIA (CSI)</h3>
+          <div className="flex flex-row justify-center sm:justify-start">
+            <Link to="https://csiindia.org/home"><img src={csi} className="h-[100px] w-[170px]"/></Link>
+          </div>
         </div>
 
         {/* Section 2 */}
@@ -34,7 +36,7 @@ const Footer = () => {
           <span className="text-md text-white"><h3 className="font-bold text-lg inline-block">Priyanshu:</h3>+91 84206 88671</span>
           <span className="text-md text-white"><h3 className="font-bold text-lg inline-block">Manjima:</h3>+91 96740 63935</span>
           <span className="text-md text-white"><h3 className="font-bold text-lg inline-block">Priyabrata:</h3>+91 81167 65002</span>
-          <span className="text-md text-white"><h3 className="font-bold text-lg inline-block">Ipsita:</h3>+91 70442 22721</span>
+          <span className="text-md text-white"><h3 className="font-bold text-lg inline-block">Ipshita:</h3>+91 70442 22721</span>
           <span className="text-xl text-white font-bold">csi.uemk.01@gmail.com</span>
 
           {/* Social Media Icons */}

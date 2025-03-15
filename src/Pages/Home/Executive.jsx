@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Postbtn from "../../components/UI/Postbtn";
-import img1 from "../../assets/img1.jpeg";   //PRIYANSHU
-import img2 from "../../assets/img2.jpg";   //DIPRO
-import img3 from "../../assets/img3.jpg";   //IPSITA
-import img4 from "../../assets/img4.jpg";   //UJJAN
-import img5 from "../../assets/img5.jpg";   //Manjima
-import img6 from "../../assets/img6.jpg";   //DEEPJYOTI
-import img7 from "../../assets/img7.png";   //Mehul
-import img8 from "../../assets/img8.jpg";   //Priyabrata
-import img9 from "../../assets/img9.jpeg";  //Jojo
-import img10 from "../../assets/img10.png"; //Madhuparna
-import img11 from "../../assets/img11.png"; //Anwesha
-import img12 from "../../assets/img12.jpg"; //Ankita
-import img13 from "../../assets/img13.jpg"; //subhojit
+import img1 from "../../assets/Members/img1.png";   //PRIYANSHU
+import img2 from "../../assets/Members/img2.png";   //DIPRO
+import img3 from "../../assets/Members/img3.png";   //IPSITA
+import img4 from "../../assets/Members/img4.png";   //UJJAN
+import img5 from "../../assets/Members/img5.png";   //Manjima
+import img6 from "../../assets/Members/img6.png";   //DEEPJYOTI
+import img7 from "../../assets/Members/img7.png";   //Mehul
+import img8 from "../../assets/Members/img8.png";   //Priyabrata
+import img9 from "../../assets/Members/img9.png";  //Jojo
+import img10 from "../../assets/Members/img10.png"; //Madhuparna
+import img11 from "../../assets/Members/img11.png"; //Anwesha
+import img12 from "../../assets/Members/img12.jpg"; //Ankita
+import img13 from "../../assets/Members/img13.jpg"; //Vedanta
 import skm from "../../assets/Faculty/skm.jpg"; //SKM Sir
 import sm from "../../assets/Faculty/sm.jpg";   //Aniruddha Sir
 import ad from "../../assets/Faculty/aniruddha.jpeg";  //Sanjukta Ma'am
