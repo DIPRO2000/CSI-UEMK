@@ -3,7 +3,7 @@ import Card from "./Card";
 import img1 from "../../assets/Members/img1.png";   //PRIYANSHU
 import img2 from "../../assets/Members/img2.png";   //DIPRO
 import img3 from "../../assets/Members/img3.png";   //IPSITA
-import img4 from "../../assets/Members/img4.png";   //UJJAN
+import img4 from "../../assets/Members/img4.png";   //UJAN
 import img5 from "../../assets/Members/img5.png";   //Manjima
 import img6 from "../../assets/Members/img6.png";   //DEEPJYOTI
 import img7 from "../../assets/Members/img7.png";   //Mehul
@@ -14,7 +14,7 @@ import img11 from "../../assets/Members/img11.png"; //Anwesha
 import img12 from "../../assets/Members/img12.jpg"; //Ankita
 import img13 from "../../assets/Members/img13.jpg"; //Vedanta
 const members = [
-    { name: "Priyanshu", designation: "President", image: img1 },
+    { name: "Priyanshu Ghosh", designation: "President", image: img1 },
     { name: "Manjima Dutta", designation: "Vice President", image: img5 },
     { name: "Priyabrata Choudhury", designation: "Manager", image: img8 },
     { name: "Ipshita Das", designation: "Manager", image: img3 },

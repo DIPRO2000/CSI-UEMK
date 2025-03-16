@@ -4,7 +4,7 @@ import Postbtn from "../../components/UI/Postbtn";
 import img1 from "../../assets/Members/img1.png";   //PRIYANSHU
 import img2 from "../../assets/Members/img2.png";   //DIPRO
 import img3 from "../../assets/Members/img3.png";   //IPSITA
-import img4 from "../../assets/Members/img4.png";   //UJJAN
+import img4 from "../../assets/Members/img4.png";   //UJAN
 import img5 from "../../assets/Members/img5.png";   //Manjima
 import img6 from "../../assets/Members/img6.png";   //DEEPJYOTI
 import img7 from "../../assets/Members/img7.png";   //Mehul
@@ -23,7 +23,7 @@ const Executive = () => {
     { name: "Sudipto Kar Mondal", img: skm, designation: "Faculty Co-Ordinator"},
     { name: "Aniruddha Das", img: ad, designation: "Faculty Co-Ordinator" },
     { name: "Sanjukta Mishra", img: sm, designation: "Faculty Co-Ordinator" },
-    { name: "Priyanshu", img: img1, designation: "President" },
+    { name: "Priyanshu Ghosh", img: img1, designation: "President" },
     { name: "Manjima Dutta", img: img5, designation: "Vice President" },
     { name: "Priyabrata Choudhury", img: img8, designation: "Manager" },
     { name: "Ipshita Das", img: img3, designation: "Manager" },
