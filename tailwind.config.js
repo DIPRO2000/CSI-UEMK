@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         rowdies: ["Rowdies", "cursive"], // Adding Rowdies font
+        orbitron: ["Orbitron", "sans-serif"]  // Adding Orbitron font
       },
     },
   },

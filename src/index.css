@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Orbitron:wght@400..900&display=swap');
 
 body{
     background-color: #6c63ff;
     background-image:url('https://i.imgur.com/2X6BRTJ.jpeg');
+    
 }

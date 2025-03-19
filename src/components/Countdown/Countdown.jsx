@@ -27,14 +27,14 @@ const Countdown = () => {
 
   return (
     <div className="text-center p-4 flex flex-col justify-center items-center ">
-      <h2 className="text-2xl font-semibold text-white mb-2 z-10">Countdown to PYSPRINT</h2>
+      <h2 className="text-2xl font-semibold text-white mb-2 z-10 font-orbitron">Countdown to PYSPRINT</h2>
       <div className="flex justify-center items-center space-x-4">
         <TimeUnit label="Days" value={days} />
-        <span className="text-yellow-500 text-3xl font-bold mx-2">:</span>
+        <span className="text-yellow-500 text-3xl font-bold mx-2 mb-7 z-10">:</span>
         <TimeUnit label="Hours" value={hours} />
-        <span className="text-yellow-500 text-3xl font-bold mx-2">:</span>
+        <span className="text-yellow-500 text-3xl font-bold mx-2 mb-7  z-10">:</span>
         <TimeUnit label="Minutes" value={minutes} />
-        <span className="text-yellow-500 text-3xl font-bold mx-2">:</span>
+        <span className="text-yellow-500 text-3xl font-bold mx-2 mb-7  z-10">:</span>
         <TimeUnit label="Seconds" value={secs} />
       </div>
     </div>
@@ -44,7 +44,7 @@ const Countdown = () => {
 const TimeUnit = ({ label, value }) => {
   return (
     <div className="text-center z-20">
-      <div className="text-4xl font-bold text-yellow-500">{value}</div>
+      <div className="text-4xl font-bold text-yellow-500 font-orbitron">{value}</div>
       <div className="text-lg font-semibold text-white">{label}</div>
     </div>
   );

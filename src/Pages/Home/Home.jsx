@@ -12,8 +12,9 @@ const Home=()=>{
     return(
         <>
             <EventHero/>
-            <Chapter/>
             <Desk/>
+            <Hero/>
+            <Chapter/>
             <Events/>
             <Post/>
             <Executive/>

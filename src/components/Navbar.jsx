@@ -36,7 +36,7 @@ const Navbar = () => {
 
     return (
         <div className={`flex items-center justify-between px-6 md:px-10 h-[15vh] sticky top-0 z-20 text-white 
-            ${(Pathname==="/")?(ScrollY > 50 )? "bg-[#023047]" : "bg-transparent" : "bg-[#023047]"} transition-all duration-300 ease-in-out`}>
+            ${(Pathname==="/")?(ScrollY > 50 )? "bg-[#023047]" : "bg-gradient-to-r from-[#a933f2] to-[#8277fe]" : "bg-[#023047]"} transition-all duration-300 ease-in-out`}>
 
             {/* Logo and Title */}
             <div className="flex items-center gap-4">
