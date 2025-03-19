@@ -4,8 +4,9 @@ import web_banner_mobile from "../assets/Posters/websitebannermobile.png";
 import Countdown from "./Countdown/Countdown";
 import Button from "./UI/Button";
 import { Link } from "react-router-dom";
+import Postbtn from "./UI/Postbtn";
 
-const EventHero = () => {
+const EventHero = ({ eventsRef }) => {
   const [bgImage, setBgImage] = useState(web_banner);
   const [bgPosition, setBgPosition] = useState("center bottom"); // Default for PC
 
@@ -13,10 +14,10 @@ const EventHero = () => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setBgImage(web_banner_mobile);
-        setBgPosition("right center"); // Shift right for mobile
+        setBgPosition("top center"); // Shift right for mobile
       } else {
         setBgImage(web_banner);
-        setBgPosition("center bottom"); // Shift bottom for PC
+        setBgPosition("center"); // Shift bottom for PC
       }
     };
 
@@ -25,13 +26,19 @@ const EventHero = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const handleScrollToEvents = () => {
+    if (eventsRef?.current) {
+      eventsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div
-      className="relative bg-fixed bg-no-repeat h-screen flex items-center justify-center"
+      className="relative bg-fixed bg-no-repeat h-screen flex items-center justify-center bg-center"
       style={{ 
         backgroundImage: `url(${bgImage})`, 
-        backgroundSize: "cover", 
-        backgroundPosition: bgPosition
+        // backgroundSize: "cover", 
+        backgroundPosition: bgPosition 
       }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -46,9 +53,13 @@ const EventHero = () => {
             <Button btn={"REGISTER"} />
           </Link>
         </div>
+        <div className="mt-10 flex justify-center">
+          <Postbtn text={"VIEW DETAILS"} onClick={handleScrollToEvents} />
+        </div>
       </div>
     </div>
   );
 };
 
 export default EventHero;
+

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Hero from "../../components/Hero";
 import Chapter from "./Chapter";
 import Events from "./Events";
@@ -8,18 +8,22 @@ import Desk from "./Desk";
 import Countdown from "../../components/Countdown/Countdown";
 import EventHero from "../../components/EventHero";
 
-const Home=()=>{
-    return(
-        <>
-            <EventHero/>
-            <Desk/>
-            <Hero/>
-            <Chapter/>
-            <Events/>
-            <Post/>
-            <Executive/>
-        </>
-    )
-}
+const Home = () => {
+    const eventsRef = useRef(null); // Reference for Events section
 
-export default Home
+    return (
+        <>
+            <EventHero eventsRef={eventsRef} />  {/* Pass ref as prop */}
+            <Desk />
+            <Hero />
+            <Chapter />
+            <div ref={eventsRef}> {/* Attach ref to Events section */}
+                <Events />
+            </div>
+            <Post />
+            <Executive />
+        </>
+    );
+};
+
+export default Home;
