@@ -11,7 +11,7 @@ import img8 from "../../assets/Members/img8.png";   //Priyabrata
 import img9 from "../../assets/Members/img9.png";  //Jojo
 import img10 from "../../assets/Members/img10.png"; //Madhuparna
 import img11 from "../../assets/Members/img11.png"; //Anwesha
-import img12 from "../../assets/Members/img12.jpg"; //Ankita
+//import img12 from "../../assets/Members/img12.jpg"; //Ankita
 import img13 from "../../assets/Members/img13.jpg"; //Vedanta
 const members = [
     { name: "Priyanshu Ghosh", designation: "President", image: img1 },
@@ -25,7 +25,7 @@ const members = [
     { name: "Madhuparna Das", designation: "Content", image: img10 },
     { name: "Deepjyoti Bhattacharya", designation: "Graphics", image: img6 },
     { name: "Vedanta", designation: "Graphics", image: img13 },
-    { name: "Ankita Chakraborty", designation: "Finance", image: img12 },
+    //{ name: "Ankita Chakraborty", designation: "Finance", image: img12 },
     { name: "Samaraho Mukherjee", designation: "Web-Dev", image: img9 },
 ];
 

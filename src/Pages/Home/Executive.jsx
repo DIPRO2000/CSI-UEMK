@@ -12,7 +12,7 @@ import img8 from "../../assets/Members/img8.png";   //Priyabrata
 import img9 from "../../assets/Members/img9.png";  //Jojo
 import img10 from "../../assets/Members/img10.png"; //Madhuparna
 import img11 from "../../assets/Members/img11.png"; //Anwesha
-import img12 from "../../assets/Members/img12.jpg"; //Ankita
+//import img12 from "../../assets/Members/img12.jpg"; //Ankita
 import img13 from "../../assets/Members/img13.jpg"; //Vedanta
 import skm from "../../assets/Faculty/skm.jpg"; //SKM Sir
 import sm from "../../assets/Faculty/sm.jpg";   //Aniruddha Sir
@@ -34,7 +34,7 @@ const Executive = () => {
     { name: "Madhuparna Das", img: img10, designation: "Content" },
     { name: "Deepjyoti Bhattacharya", img: img6, designation: "Graphics" },
     { name: "Vedanta", img: img13, designation: "Graphics" },
-    { name: "Ankita Chakraborty", img: img12, designation: "Finance" },
+    //{ name: "Ankita Chakraborty", img: img12, designation: "Finance" },
     { name: "Samaraho Mukherjee", img: img9, designation: "Web-Dev" },
   ];
 
