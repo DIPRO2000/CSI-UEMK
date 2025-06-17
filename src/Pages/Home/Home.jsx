@@ -13,7 +13,7 @@ const Home = () => {
 
     return (
         <>
-            <EventHero eventsRef={eventsRef} />  {/* Pass ref as prop */}
+            {/* <EventHero eventsRef={eventsRef} />   */}
             <Desk />
             <Hero />
             <Chapter />

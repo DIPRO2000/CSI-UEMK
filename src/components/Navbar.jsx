@@ -68,6 +68,7 @@ const Navbar = () => {
                     {/* <li ><NavLink to="/about" onClick={() => setMenuOpen(false)}><Hover text={"ABOUT"}/></NavLink></li> */}
                     <li onClick={menuClick}><NavLink to="/team" onClick={() => setMenuOpen(false)}><Hover text={"TEAM"}/></NavLink></li>
                     <li onClick={menuClick}><NavLink to="/gallery" onClick={() => setMenuOpen(false)}><Hover text={"GALLERY"}/></NavLink></li>
+                    <li onClick={menuClick}><NavLink to="/review" onClick={() => setMenuOpen(false)}><Hover text={"REVIEWS"}/></NavLink></li>
                     <li onClick={menuClick}><NavLink to="/contact" onClick={() => setMenuOpen(false)}><Hover text={"CONTACT"}/></NavLink></li>
                 </ul>
             </div>
