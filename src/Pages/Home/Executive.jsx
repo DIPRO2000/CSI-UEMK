@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Postbtn from "../../components/UI/Postbtn";
-import img1 from "../../assets/Members/img1.png";   //PRIYANSHU
-import img2 from "../../assets/Members/img2.png";   //DIPRO
-import img3 from "../../assets/Members/img3.png";   //IPSITA
-import img4 from "../../assets/Members/img4.png";   //UJAN
-import img5 from "../../assets/Members/img5.png";   //Manjima
-import img6 from "../../assets/Members/img6.png";   //DEEPJYOTI
-import img7 from "../../assets/Members/img7.png";   //Mehul
-import img8 from "../../assets/Members/img8.png";   //Priyabrata
-import img9 from "../../assets/Members/img9.png";  //Jojo
-import img10 from "../../assets/Members/img10.png"; //Madhuparna
-import img11 from "../../assets/Members/img11.png"; //Anwesha
-//import img12 from "../../assets/Members/img12.jpg"; //Ankita
-import img13 from "../../assets/Members/img13.jpg"; //Vedanta
-import skm from "../../assets/Faculty/skm.jpg"; //SKM Sir
-import sm from "../../assets/Faculty/sm.jpg";   //Aniruddha Sir
-import ad from "../../assets/Faculty/aniruddha.jpeg";  //Sanjukta Ma'am
+import img1 from "../../assets/Members/img1.png";
+import img2 from "../../assets/Members/img2.png";
+import img3 from "../../assets/Members/img3.png";
+import img4 from "../../assets/Members/img4.png";
+import img5 from "../../assets/Members/img5.png";
+import img6 from "../../assets/Members/img6.png";
+import img7 from "../../assets/Members/img7.png";
+import img8 from "../../assets/Members/img8.png";
+import img9 from "../../assets/Members/img9.png";
+import img10 from "../../assets/Members/img10.png";
+import img11 from "../../assets/Members/img11.png";
+//import img12 from "../../assets/Members/img12.jpg";
+import img13 from "../../assets/Members/img13.jpg";
+import skm from "../../assets/Faculty/skm.jpg";
+import sm from "../../assets/Faculty/sm.jpg";
+import ad from "../../assets/Faculty/aniruddha.jpeg";
 
 const Executive = () => {
   const members = [
@@ -34,20 +34,28 @@ const Executive = () => {
     { name: "Madhuparna Das", img: img10, designation: "Content" },
     { name: "Deepjyoti Bhattacharya", img: img6, designation: "Graphics" },
     { name: "Vedanta", img: img13, designation: "Graphics" },
-    //{ name: "Ankita Chakraborty", img: img12, designation: "Finance" },
     { name: "Samaraho Mukherjee", img: img9, designation: "Web-Dev" },
   ];
 
-  const [innerWidth,setInnerWidth]=useState(1205);
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+  const handleResize = () => {
+    setInnerWidth(window.innerWidth);
+  };
+  
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  const sizeHandler=()=>{
-      setInnerWidth(window.innerWidth);
-  }
+  // Determine group size based on screen width
+  const groupSize = innerWidth < 470 ? 1 : 2;
 
-  // Group members into pairs for the slider
+  // Group members into pairs or single based on groupSize
   const groupedMembers = [];
-  for (let i = 0; i < members.length; i += 2) {
-    groupedMembers.push(members.slice(i, i + 2));
+
+  for (let i = 0; i < members.length; i += groupSize) {
+    groupedMembers.push(members.slice(i, i + groupSize)); 
   }
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -60,19 +68,17 @@ const Executive = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + groupedMembers.length) % groupedMembers.length);
   };
 
+  // Automatic slide every 5 seconds
   useEffect(() => {
     const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
-  }, []);
-
-  useEffect(()=>{
-    window.addEventListener("resize", sizeHandler);
-    return () => window.removeEventListener("resize", sizeHandler);
-  },[]);
+  }, [currentIndex]);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[url('https://i.imgur.com/2X6BRTJ.jpeg')] bg-cover h-screen bg-no-repeat">
-      <h1 className="mb-20 text-center font-rowdies text-6xl font-bold text-white" >EXECUTIVE BOARD</h1>
+      <h1 className="mb-20 text-center font-rowdies text-6xl font-bold text-white">
+        EXECUTIVE BOARD
+      </h1>
 
       <div className="relative w-full max-w-4xl overflow-hidden">
         {/* Carousel Wrapper */}
@@ -84,15 +90,17 @@ const Executive = () => {
             <div key={index} className="flex w-full justify-around items-center flex-shrink-0">
               {pair.map((member, idx) => (
                 <div key={idx} className="text-center flex flex-col items-center">
-                  <img
+                   <img
                     src={member.img}
                     alt={member.name}
                     className="w-[150px] h-[150px] object-cover rounded-lg"
-                  />
-                  <h3 className="text-white font-bold">{member.name}</h3>
-                  <span className="text-gray-300 font-extrabold">{member.designation}</span>
-                </div>
-              ))}
+                   />
+                   <h3 className="text-white font-bold">{member.name}</h3>
+                   <span className="text-gray-300 font-extrabold">
+                     {member.designation}
+                   </span>
+                 </div>
+               ))}
             </div>
           ))}
         </div>
@@ -100,7 +108,7 @@ const Executive = () => {
         {/* Navigation Buttons */}
         <button
           onClick={prevSlide}
-          className={`absolute ${innerWidth < 470 ? "hidden" : ""}  top-1/2 left-2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-md hover:scale-105`}
+          className={`absolute ${innerWidth < 470 ? "hidden" : ""} top-1/2 left-2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-md hover:scale-105`}
         >
           &#10094;
         </button>
@@ -112,7 +120,11 @@ const Executive = () => {
         </button>
       </div>
 
-      <div className="py-10"><NavLink to="/team"><Postbtn text={"SEE TEAM"}/></NavLink></div>
+      <div className="py-10">
+        <NavLink to="/team">
+          <Postbtn text={"SEE TEAM"} />
+        </NavLink>
+      </div>
     </div>
   );
 };

@@ -22,6 +22,10 @@ import img20 from "../../assets/gallery/img20.jpg";
 import img21 from "../../assets/gallery/img21.jpg";
 import img22 from "../../assets/gallery/img22.jpg";
 import img23 from "../../assets/gallery/img23.jpg";
+import img24 from "../../assets/gallery/img24.jpg";
+import img25 from "../../assets/gallery/img25.jpg";
+import img26 from "../../assets/gallery/img26.jpg";
+import img27 from "../../assets/gallery/img27.jpg";
 import Picture from "../../components/Picture";
 
 const Gallery=()=>{
@@ -35,6 +39,10 @@ const Gallery=()=>{
                     <Picture ig={img10}/>
                     <Picture ig={img11}/>
                     <Picture ig={img12}/>
+                    <Picture ig={img24}/>
+                    <Picture ig={img25}/>
+                    <Picture ig={img26}/>
+                    <Picture ig={img27}/>
                     <Picture ig={img13}/>
                     <Picture ig={img14}/>
                     <Picture ig={img15}/>

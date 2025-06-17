@@ -5,6 +5,7 @@ import Events from "./Events";
 import Post from "./Post";
 import Executive from "./Executive";
 import Desk from "./Desk";
+import Review from "./Review";
 import Countdown from "../../components/Countdown/Countdown";
 import EventHero from "../../components/EventHero";
 
@@ -22,6 +23,7 @@ const Home = () => {
             </div>
             <Post />
             <Executive />
+            <Review />
         </>
     );
 };
