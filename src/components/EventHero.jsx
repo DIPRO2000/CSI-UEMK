@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import web_banner from "../assets/Posters/websitebanner.png";
-import web_banner_mobile from "../assets/Posters/websitebannermobile.png";
+import web_banner from "../assets/Posters/HackBerryPiLargeScreen.jpg";
+import web_banner_mobile from "../assets/Posters/HackBerryPiMobileScreen.jpg";
 import Countdown from "./Countdown/Countdown";
 import Button from "./UI/Button";
 import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@ const EventHero = ({ eventsRef }) => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setBgImage(web_banner_mobile);
-        setBgPosition("top center"); // Shift right for mobile
+        // setBgPosition("top center"); // Shift right for mobile
       } else {
         setBgImage(web_banner);
         setBgPosition("center"); // Shift bottom for PC
@@ -37,7 +37,7 @@ const EventHero = ({ eventsRef }) => {
       className="relative bg-fixed bg-no-repeat h-screen flex items-center justify-center bg-center"
       style={{ 
         backgroundImage: `url(${bgImage})`, 
-        // backgroundSize: "cover", 
+        backgroundSize: "cover", 
         backgroundPosition: bgPosition 
       }}
     >

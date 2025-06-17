@@ -2,7 +2,7 @@ import React from "react";
 
 const Deskbox = (props) => {
     return (
-        <div className="flex flex-col md:flex-row md:gap-4 lg:gap-0 h-auto md:h-[700px] p-6">
+        <div className="flex flex-col md:flex-row md:gap-4 lg:gap-0 h-auto md:h-[500px] p-6">
             
             {/* Image Section */}
             <div className="flex flex-col justify-center items-center md:items-start   md:ml-16">

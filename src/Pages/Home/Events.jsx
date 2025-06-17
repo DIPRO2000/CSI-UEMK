@@ -12,8 +12,9 @@ const Events = () => {
 
   // Past events array
   const pastEvents = [
+    { name: "PYSPRINT", text: "DATE: 22nd March,2025", btn: "VIEW", post: pysprint, link: "/gallery" },
     { name: "DSA WORKSHOP", text: "DATE: 28th September,2024", btn: "VIEW", post: dsaworkshop, link: "/gallery" },
-    { name: "PYSPRINT", text: "DATE: 22nd March,2025", btn: "VIEW", post: pysprint, link: "/gallery" }
+    
   ];
 
   // Separate state for ongoing and past

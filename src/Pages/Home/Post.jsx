@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Postbtn from "../../components/UI/Postbtn";
 import { NavLink } from "react-router-dom";
-import img1 from  "../../assets/gallery/pic1.jpeg";
-import img2 from  "../../assets/gallery/pic2.jpeg";
-import img3 from  "../../assets/gallery/pic3.jpeg";
-import img4 from  "../../assets/gallery/pic4.jpeg";
-import img5 from  "../../assets/gallery/pic5.jpeg";
-import img6 from  "../../assets/gallery/pic6.jpeg";
+import img1 from  "../../assets/gallery/img10.jpg";
+import img2 from  "../../assets/gallery/img14.jpg";
+import img3 from  "../../assets/gallery/img13.jpg";
+import img4 from  "../../assets/gallery/img27.jpg";
+import img5 from  "../../assets/gallery/img25.jpg";
+import img6 from  "../../assets/gallery/img26.jpg";
+import img7 from  "../../assets/gallery/img19.jpg";
 
 const Post = () => {
-  const images = [img1, img2, img3, img4, img5, img6];
+  const images = [img1, img2, img3, img4, img5, img6, img7];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(2); // Default to 2 images per slide

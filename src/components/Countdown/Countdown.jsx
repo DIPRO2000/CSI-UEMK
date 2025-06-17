@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const Countdown = () => {
-  const endDateTime = new Date("2025-03-22T09:00:00+05:30"); // IST (Indian Standard Time)
+  const endDateTime = new Date("2025-06-21T09:00:00+05:30"); // IST (Indian Standard Time)
 
   const calculateTimeLeft = () => {
     const difference = endDateTime - new Date();
@@ -27,7 +27,7 @@ const Countdown = () => {
 
   return (
     <div className="text-center p-4 flex flex-col justify-center items-center ">
-      <h2 className="text-2xl font-semibold text-white mb-2 z-10 font-orbitron">Countdown to PYSPRINT</h2>
+      <h2 className="text-2xl font-semibold text-white mb-2 z-10 font-orbitron">Countdown to HACKBERRY PI</h2>
       <div className="flex justify-center items-center space-x-4">
         <TimeUnit label="Days" value={days} />
         <span className="text-yellow-500 text-3xl font-bold mx-2 mb-7 z-10">:</span>

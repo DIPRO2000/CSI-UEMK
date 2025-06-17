@@ -4,7 +4,7 @@ import bg_pic from "../assets/background_pic.jpg";
 const Hero = () => {
   return (
     <div
-      className="relative bottom-[97px] bg-cover bg-center bg-fixed h-screen flex items-center justify-center"
+      className="relative bg-cover bg-center bg-fixed h-screen flex items-center justify-center"
       style={{ backgroundImage: `url(${bg_pic})` }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
