@@ -49,7 +49,7 @@ const EventHero = ({ eventsRef }) => {
           <Countdown />
         </div>
         <div className="sm:mt-10">
-          <Link to="https://forms.gle/rJb1S3RJsLHPzJ139">
+          <Link to="https://docs.google.com/forms/d/e/1FAIpQLScrDiiwDfUMUdgAhCjvOcI-8NdKZOSricKs4ogVTPBk5zkL7Q/viewform">
             <Button btn={"REGISTER"} />
           </Link>
         </div>

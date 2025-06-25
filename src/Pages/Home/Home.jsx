@@ -14,7 +14,7 @@ const Home = () => {
 
     return (
         <>
-            {/* <EventHero eventsRef={eventsRef} />   */}
+            <EventHero eventsRef={eventsRef} />  
             <Desk />
             <Hero />
             <Chapter />

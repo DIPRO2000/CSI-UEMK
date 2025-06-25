@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const Countdown = () => {
-  const endDateTime = new Date("2025-06-21T09:00:00+05:30"); // IST (Indian Standard Time)
+  const endDateTime = new Date("2025-06-28T09:00:00+05:30"); // IST (Indian Standard Time)
 
   const calculateTimeLeft = () => {
     const difference = endDateTime - new Date();

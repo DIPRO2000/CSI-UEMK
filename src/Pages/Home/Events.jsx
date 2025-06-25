@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Poster from "../../components/Poster";
 import pysprint from "../../assets/Posters/poster.jpg";
 import dsaworkshop from "../../assets/Posters/dsa_poster.jpeg";
+import Hackberrypi from "../../assets/Posters/Hackberry Pi.png"
 
 const Events = () => {
   // Ongoing events array
   const ongoingEvents = [
-    //{ name: "PYSPRINT", text: "DATE: 22nd March,2025", btn: "REGISTER", post: pysprint, link: "https://forms.gle/rJb1S3RJsLHPzJ139" },
+    { name: "Hackberry Pi", text: "DATE: 28th June,2025", btn: "REGISTER", post: Hackberrypi, link: "https://docs.google.com/forms/d/e/1FAIpQLScrDiiwDfUMUdgAhCjvOcI-8NdKZOSricKs4ogVTPBk5zkL7Q/viewform" },
     //{ name: "DSA WORKSHOP", text: "DATE: 28th September,2024", btn: "VIEW", post: dsaworkshop, link: "/gallery" }
   ];
 
@@ -52,7 +53,7 @@ const Events = () => {
             <h1 className="text-center text-3xl my-10 font-semibold">
               Ongoing Events
             </h1>
-            {/* <div className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-5">
+            <div className="flex flex-row justify-center flex-wrap gap-x-5 gap-y-5">
               <Poster
                 name={ongoingEvents[currentOngoing].name}
                 text={ongoingEvents[currentOngoing].text}
@@ -60,9 +61,10 @@ const Events = () => {
                 post={ongoingEvents[currentOngoing].post}
                 link={ongoingEvents[currentOngoing].link}
               />
-            </div> */}
+            </div>
+
             {/* Previous/Next Buttons */}
-            {/* <div className="flex justify-center gap-4 mt-6">
+            <div className="flex justify-center gap-4 mt-6">
               <button
                 onClick={handlePreviousOngoing}
                 className="px-4 py-2 bg-gray-700 text-gray-100 font-semibold rounded"
@@ -75,11 +77,11 @@ const Events = () => {
               >
                 Next
               </button>
-            </div> */}
-            <div className="flex flex-col justify-center items-center h-36 sm:h-[550px]">
+            </div>
+            {/* <div className="flex flex-col justify-center items-center h-36 sm:h-[550px]">
                 <span className="text-4xl">COMING SOON</span>
                 <span className="text-2xl">STAY TUNNED!!!</span>
-            </div>
+            </div> */}
           </div>
 
           {/* Past Section */}
